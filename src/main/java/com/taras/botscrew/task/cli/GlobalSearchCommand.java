@@ -46,8 +46,9 @@ public class GlobalSearchCommand implements Command {
             if (!lecturersResults.isEmpty()) {
                 resultBuilder.append("\nLecturers:");
                 for (Lecturer lecturer: lecturersResults) {
-                    resultBuilder.append(lecturer.getFullName()).append("\n");
+                    resultBuilder.append("\n").append(lecturer.getFullName());
                 }
+                resultBuilder.append("\n");
             }
 
             return resultBuilder.toString();

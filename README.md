@@ -17,4 +17,4 @@ After the project is successfully built, you are free to test the application us
 
 5. Global search by {template}.
 
-You check reference the H2 console for checking the names of the entities, or look them up int src/main/resources/data.sql file.
+You check reference the H2 console for checking the names of the entities, or look them up in src/main/resources/data.sql file.

@@ -1,5 +1,6 @@
 package com.taras.botscrew.task.cli;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -13,6 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
+@Slf4j
 public class CLI implements CommandLineRunner {
     @Autowired
     private List<Command> commands;
@@ -42,7 +44,7 @@ public class CLI implements CommandLineRunner {
                             () -> System.out.println("Command not found")
                     );
                 } catch (Exception e) {
-                    throw new RuntimeException(e);
+                    log.error("Exception occurred: " + e.getMessage());
                 }
             }
 
